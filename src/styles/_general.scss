@@ -1,0 +1,107 @@
+html, body {
+	height: 100%;
+}
+
+img {
+	max-width: 100%;
+}
+
+body {
+	color: $medium-dark-color;
+	font-family: $font-stack;
+	font-size: 16px;
+	font-weight: 300;
+	overflow-x: hidden;
+
+	@media (min-width: 651px) {
+		overflow-y: visible !important;
+	}
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 15px;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+input, textarea, select {
+	font-weight: 300;
+	color: $medium-color;
+	font-size: 16px;
+	border: none;
+	outline: none;
+	padding: 15px 20px;
+	width: 100%;
+	transition: 0.3s outline, 0.3s background-color;
+}
+
+textarea {
+	resize: none;
+}
+
+input[type="submit"], .button, button {
+	background-color: $accent-color;
+	padding: 15px 25px;
+	color: white;
+	margin: 0 auto;
+	transition: background-color 0.3s;
+	text-transform: uppercase;
+	display: inline-block;
+	border: 0;
+	border-radius: 0;
+	outline: 0;
+	font-weight: 300;
+
+	&:hover, &:active, &:focus {
+		background-color: $accent-color-hover;
+		color: white;
+	}
+}
+
+:-webkit-input-placeholder {
+  color: $medium-color;
+}
+
+:-moz-placeholder {
+	color: $medium-color;
+}
+
+:-ms-input-placeholder {
+	color: $medium-color;
+}
+
+:-moz-placeholder {
+	color: $medium-color;
+}
+
+.accessible {
+	position: absolute !important;
+	clip: rect(0, 0, 0, 0);
+	overflow: hidden;
+	border: 0 none !important;
+	width: 1px !important;
+	height: 1px !important;
+	margin: -1px;
+}
+
+.skipnav {
+	&:focus, &:active {
+		position: absolute !important;
+		top: 5px !important;
+		left: 42% !important;
+		width: 16%;
+		background-color: #000;
+		padding: 10px;
+		color: #fff;
+		z-index: 9999;
+		text-align: center;
+		clip: inherit;
+		overflow: hidden;
+		border: 0 none !important;
+		width: auto !important;
+		height: auto !important;
+		margin: inherit;
+	}
+}
