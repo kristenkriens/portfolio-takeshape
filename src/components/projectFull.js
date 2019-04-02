@@ -5,7 +5,7 @@ import { getImageUrl } from "takeshape-routing";
 import Layout from "../layout";
 import routes from '../routes';
 
-const ProjectPage = (props) => {
+const ProjectFull = (props) => {
   const { data } = props;
   const { takeshape } = data;
   const { project } = takeshape;
@@ -33,7 +33,7 @@ const ProjectPage = (props) => {
   )
 };
 
-export default ProjectPage;
+export default ProjectFull;
 
 export const query = graphql`
   query($projectId: ID!) {

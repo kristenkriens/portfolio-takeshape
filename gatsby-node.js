@@ -18,7 +18,7 @@ exports.createPages = async ({ actions, graphql }) => {
   data.takeshape.projects.items.forEach(({ _id, name }) => {
     actions.createPage({
       path: routes.project(name),
-      component: path.resolve("./src/pages/project.js"),
+      component: path.resolve("./src/components/projectFull.js"),
       context: {
         projectId: _id
       }
