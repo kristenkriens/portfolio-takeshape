@@ -1,6 +1,7 @@
 import React from "react";
 import Helmet from "react-helmet";
 import { StaticQuery, graphql } from "gatsby";
+import { getImageUrl } from "takeshape-routing";
 
 const Head = (props) => {
   const { data, seo } = props;
@@ -8,6 +9,7 @@ const Head = (props) => {
   const { siteSettings } = takeshape;
 
   const title = `${seo.title} | ${siteSettings.siteName}`;
+  const favicon = getImageUrl(siteSettings.favicon.path);
 
   return (
     <Helmet>
@@ -16,7 +18,7 @@ const Head = (props) => {
       <meta charSet="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <meta name="description" content={seo.description} />
-      <meta property="og:locale" content="en_US" />
+      <meta property="og:locale" content="en_CA" />
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={seo.description} />
@@ -24,8 +26,8 @@ const Head = (props) => {
       <meta property="og:site_name" content={siteSettings.siteName} />
       <meta property="og:image" content={seo.ogImage.path} />
       <link rel="canonical" href="https://kristenkriens.com/" /> /* TODO: */
-      <link rel="icon" href={siteSettings.favicon.path} type="image/png" />
-      <link rel="apple-touch-icon-precomposed" href={siteSettings.favicon.path} type="image/png" />
+      <link rel="icon" href={favicon} type="image/png" />
+      <link rel="apple-touch-icon-precomposed" href={favicon} type="image/png" />
     </Helmet>
   )
 };

@@ -12,7 +12,7 @@ const Layout = (props) => {
     <>
       <Head seo={seo} />
       <Header />
-      <div className="main">{children}</div>
+      <main>{children}</main>
       <Footer />
     </>
   )
