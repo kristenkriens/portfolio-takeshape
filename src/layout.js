@@ -5,8 +5,6 @@ import Head from "./components/shared/head";
 import Header from "./components/shared/header";
 import Footer from "./components/shared/footer";
 
-import './styles/styles.scss';
-
 const Layout = (props) => {
   const { children, seo } = props;
 
