@@ -2,7 +2,7 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    siteUrl: "https://www.example.com",
+    siteUrl: `${process.env.SITE_URL}`,
   },
   plugins: [
     "gatsby-plugin-react-helmet",
@@ -22,6 +22,12 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `${process.env.SITE_URL}`,
+      },
+    },
+    {
       resolve: "gatsby-plugin-sass",
       options: {
         implementation: require("node-sass"),
@@ -32,6 +38,14 @@ module.exports = {
       options: {
         rule: {
           include: /assets/
+        }
+      }
+    },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        google: {
+          families: ["Lato:100,300,500,700"]
         }
       }
     }

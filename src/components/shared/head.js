@@ -22,10 +22,8 @@ const Head = (props) => {
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={seo.description} />
-      <meta property="og:url" content="https://kristenkriens.com/" /> /* TODO: */
       <meta property="og:site_name" content={siteSettings.siteName} />
       <meta property="og:image" content={seo.ogImage.path} />
-      <link rel="canonical" href="https://kristenkriens.com/" /> /* TODO: */
       <link rel="icon" href={favicon} type="image/png" />
       <link rel="apple-touch-icon-precomposed" href={favicon} type="image/png" />
     </Helmet>
